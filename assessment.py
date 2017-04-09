@@ -16,7 +16,7 @@ go below this docstring.
 #        `True` if it is your hometown, and `False` otherwise.
 
 def kathryn_hometown(town):
-    """ Return True if town is Kathryn's hometown"""
+    """ Return True if given town is Kathryn's hometown"""
 
     if town == "Roseville":
         return True
@@ -27,7 +27,6 @@ def kathryn_hometown(town):
 #        returns the concatenation of the two names in one string.
 
 def full_name(first_name, last_name):
-
     """Return first and last name as one string"""
 
     return first_name + " " + last_name
@@ -39,8 +38,7 @@ def full_name(first_name, last_name):
 #        from part (a) evaluates to.
 
 def greeting(first_name, last_name, home_town):
-
-    """Print greeting based on user hometown"""
+    """Print greeting based on user's hometown"""
 
     if kathryn_hometown(home_town) == True:
         print "Hi, {}, we're from the same place!".format(full_name(first_name, last_name))
