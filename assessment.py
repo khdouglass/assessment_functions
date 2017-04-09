@@ -193,6 +193,13 @@ def calculate_price(item_price, state_abbrev, tax_percentage=.05):
 #        isn't something we've discussed yet in class; you might need to google how to
 #        write a Python function that takes in an arbitrary number of arguments.
 
+def add_to_list(lst, *args):
+    """Append any number of integers to a list"""
+
+    for arg in args:
+        lst.append(arg)
+    return lst
+
 #    (b) Make a new function with a nested inner function.
 #        The outer function will take in a word.
 #        The inner function will multiply that word by 3.
@@ -205,6 +212,12 @@ def calculate_price(item_price, state_abbrev, tax_percentage=.05):
 #        >>> outer("Balloonicorn")
 #        ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
 
+def nested_functions(word):
+    """Return tuple containing given word and word multiplied by three"""
+
+    def mult_by_three(word):
+        return word * 3
+    print (word,(mult_by_three(word)))
 
 ###############################################################################
 
