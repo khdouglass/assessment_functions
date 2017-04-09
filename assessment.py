@@ -149,22 +149,6 @@ def calculate_price(item_price, state_abbrev, tax_percentage=.05):
     135.3
 
     """
-    #    (d) Write a function calculate_price to calculate an item's total cost by
-#        adding tax, and any fees required by state law.
-
-#        Your function will take as parameters (in this order): the base price of
-#        the item, a two-letter state abbreviation, and the tax percentage (as a
-#        two-digit decimal, so, for instance, 5% will be .05). If the user does not
-#        provide a tax rate it should default to 5%.
-
-#        CA law requires stores to collect a 3% recycling fee, PA requires a $2
-#        highway safety fee, and in MA, there is a Commonwealth Fund fee of $1 for
-#        items with a base price under $100 and $3 for items $100 or more. Fees are
-#        added *after* the tax is calculated.
-
-#        Your function should return the total cost of the item, including tax and
-#        fees.
-
     
     if state_abbrev == "CA":
 
@@ -213,7 +197,7 @@ def add_to_list(lst, *args):
 #        ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
 
 def nested_functions(word):
-    """Return tuple containing given word and word multiplied by three"""
+    """Return tuple containing given word and [pword multiplied by three"""
 
     def mult_by_three(word):
         return word * 3
