@@ -16,9 +16,9 @@ go below this docstring.
 #        `True` if it is your hometown, and `False` otherwise.
 
 def kathryn_hometown(town):
-    """ Return True if given town is Kathryn's hometown"""
+    """ Return True if a given town is Kathryn's hometown."""
 
-    if town == "Roseville":
+    if town.lower() == "roseville":
         return True
     else:
         return False
@@ -27,7 +27,7 @@ def kathryn_hometown(town):
 #        returns the concatenation of the two names in one string.
 
 def full_name(first_name, last_name):
-    """Return first and last name as one string"""
+    """Return first and last name as one string."""
 
     return first_name + " " + last_name
 
@@ -38,7 +38,7 @@ def full_name(first_name, last_name):
 #        from part (a) evaluates to.
 
 def greeting(first_name, last_name, home_town):
-    """Print greeting based on user's hometown"""
+    """Print greeting based on user's hometown."""
 
     if kathryn_hometown(home_town) == True:
         print "Hi, {}, we're from the same place!".format(full_name(first_name, last_name))
@@ -90,7 +90,7 @@ def is_berry(fruit):
 
     """
 
-    if fruit == "strawberry" or fruit == "raspberry" or fruit == "blackberry":
+    if fruit.lower() in ["strawberry", "raspberry", "blackberry"]:
         return True
     else:
         return False
@@ -122,9 +122,9 @@ def append_to_list(lst, num):
 
     """
 
-    lst[(len(lst)+1):] = [num]
+    new_list = lst + [num]
 
-    return lst
+    return new_list
 
 
 def calculate_price(item_price, state_abbrev, tax_percentage=.05):
@@ -150,12 +150,11 @@ def calculate_price(item_price, state_abbrev, tax_percentage=.05):
 
     """
     
-    if state_abbrev == "CA":
-
+    if state_abbrev.lower() == "ca":
         return (item_price + (item_price * tax_percentage)) * 1.03
-    elif state_abbrev == "PA":
+    elif state_abbrev.lower() == "pa":
         return item_price + (item_price * tax_percentage) + 2
-    elif state_abbrev == "MA":
+    elif state_abbrev.lower() == "ma":
         if item_price < 100:
             return item_price + (item_price * tax_percentage) + 1
         else:
