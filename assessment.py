@@ -177,7 +177,7 @@ def calculate_price(item_price, state_abbrev, tax_percentage=.05):
 #        write a Python function that takes in an arbitrary number of arguments.
 
 def add_to_list(lst, *args):
-    """Append any number of integers to a list"""
+    """Append any number of integers to a list."""
 
     for arg in args:
         lst.append(arg)
@@ -195,8 +195,8 @@ def add_to_list(lst, *args):
 #        >>> outer("Balloonicorn")
 #        ('Balloonicorn', 'BalloonicornBalloonicornBalloonicorn')
 
-def nested_functions(word):
-    """Return tuple containing given word and [pword multiplied by three"""
+def tuple_of_words(word):
+    """Return tuple containing the word and the word repeated three times."""
 
     def mult_by_three(word):
         return word * 3
